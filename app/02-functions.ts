@@ -1,3 +1,58 @@
+/*
+--
+CLASS LECTURE NOTES
+--
+*/
+/*
+CHALLENGE:
+Follow these steps to create a TypeScript function:
+- Create a function with a return type of boolean.
+- The function takes in a string username and string password for it's password.
+- Inside the function have a conditional that checks if the username is set to <elevenfiftyuser> and the password is ,Letmein1234!>.
+
+If both conditions are true, the function should return true.
+
+If one or both conditions are false the function should return false.
+*/
+
+function nameCheckDetails(un: string, pw: string) : boolean {
+  if (un === 'elevenfiftyuser' && pw === 'Letmein1234!') {
+    return true 
+} else {
+  return false
+}
+}
+nameCheckDetails('elevenfiftyuser', 'Letmein1234!')
+;
+
+
+/*
+OPTIONALS 
+*/
+
+// CHALLENGE
+/*
+write a function that has three params: first, middle, and last that returns a type of string.
+-the middle param should be optional and first and last are required.
+-if a value is passed in for middle, concat the fullname and include the middle name.
+-if a value is not passed in for middle, concat the fullname with just first and last.
+*/
+
+function threePartName (first: string, last: string, middle?: string) {
+  let full = middle ? `${first}` ${middle} ${last} : `${first}` `${last}`
+}
+
+threePartName("Ing", "borg", "e");
+/*
+--
+---
+MODULE NOTES
+---
+--
+*/
+
+
+
 /* 
 TYPESCRIPT SAFETY IN ARGUMENTS 
 ++++++++++++++++++++++++++++++
@@ -17,9 +72,9 @@ addNumbers(1, 2, 3, "Foo");
 
 //Practice...
 function fullName(firstName: string, lastName: string){
-  return firstName + lastName;
+  return firstName + " " + lastName;
 }
-
+fullName(Alec, Synnestvedt);
 /* 
 RETURN TYPES
 */
@@ -50,17 +105,8 @@ We call the function and pass in the wrong return type. The argument does not sa
 
 The compiler tells us that there is an error before we run the code!!!
 */
-/*
-Follow these steps to create a TypeScript function:
-- Create a function with a return type of boolean.
-- The function takes in a string username and string password for it's password.
-- Inside the function have a conditional that checks if the username is set to <elevenfiftyuser> and the password is ,Letmein1234!>.
 
-If both conditions are true, the function should return true.
-
-If one or both conditions are false the function should return false.
-*/
-                                //1                             //2
+//1                             //2
 function addNumbersWithOptional(numOne: number, numTwo: number, someString?: string){
   console.log(someString);
   return numOne + numTwo;
