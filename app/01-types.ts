@@ -196,24 +196,3 @@ function getFirstThree(x: number[] | string) {
   return x.slice(0, 3);
 }
 
-/* 
-TYPESCRIPT SAFETY IN ARGUMENTS 
-++++++++++++++++++++++++++++++
-
-TypeScript allows us to bring types to our parameters and limits to the number of arguments we pass in. Go into the  file. Let's add some functions, and add the following code:
-*/
-function addNumbers(numOne: number, numTwo: number){ 
-  return numOne + numTwo; 
-}
-
-//1 - Works
-addNumbers(1, 2);
-
-//2 - Errors
-addNumbers(1, 2, 3);
-addNumbers(1, 2, 3, "Foo");
-
-//Practice...
-function fullName(firstName: string, lastName: string){
-  return firstName + lastName;
-}
