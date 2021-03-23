@@ -1,7 +1,71 @@
+/*
++++++
+CLASS LECTURE NOTES
++++++
+*/
+//STRING
+
+
+//ANY 
+/*
+DO NOT use this in final production code. This defeats the purpose of TS in a way...and is NOT a best practice.
+*/
+let dataFromThirdParty: any = '123456';
+console.log(dataFromThirdParty, typeof dataFromThirdParty);
+
+let dataFromThirdParty = 12345;
+console.log(dataFromThirdParty, typeof dataFromThirdParty);
+
+//enum
+enum WeaponType {Sword, Saber, Spear};
+let weapon: WeaponType = WeaponType.Spear;
+console.log(weapon); 
+
+enum CardType { Ace = 1, Two, Three, Four };
+let cardType: string = CardType[2];
+console.log(cardType);
+
+//Array 
+//set to be strct, so we want to set a single type to an array 
+let studentList: string[] = ["Taylor", "Adam", "Brittany"];
+let allScore: Array<number> = [100, 92, 96, 83];
+
+
+//Tupple 
+//array with multiple types
+let userNameAndID: [string, number];
+userNameAndID = ["userOne", 1];
+//order matters. 
+
+//Void 
+function sayHelloToAll() void {
+  console.log("hello to all")
+}
+
+function actuallySayHi(): string {
+  return 'Hi!'
+}
+
+
+
+
+
+
+
+
+
+/*
++++++
+MODULE NOTES
++++++
+*/
+
 //1   //2     //3
 let username: string = "instructor";
 let password: string = "letmein1234!";
 let instructorId: number = 5;
+
+//you don't always need to initialize it. 
 
 let password: string;
 let phoneNumber: number;
@@ -60,7 +124,7 @@ console.log("Student List:", studentList[0]);
 One of the things that many developers like about TypeScript is the ability to toggle off forced types if the type is not known during development. At any point in the application, we may not know what type a variable is. This could be coming from a 3rd party package. With these cases, we let the type be decided at compile time, and we can use the  type: */
 
 let dataFromThirdParty: any = '12345';
-console.log(dataFromTHirdParty);
+console.log(dataFromThirdParty);
 console.log(typeof dataFromThirdParty);
 
 dataFromThirdParty = 12345;
